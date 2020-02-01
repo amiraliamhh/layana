@@ -1,0 +1,14 @@
+@import 'src/style/vars.scss';
+
+.container {
+    width: $container-size;
+    display: flex;
+}
+
+body {
+    color: $font-grey;
+    margin: 0px;
+    * {
+        box-sizing: border-box;
+    }
+}

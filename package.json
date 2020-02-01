@@ -1,0 +1,26 @@
+{
+  "name": "layana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/amiraliamhh/layana",
+  "author": "amiraliamhh <amiraliamhh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel public/index.html"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
+    "parcel": "^1.12.4",
+    "sass": "^1.25.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  }
+}
