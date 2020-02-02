@@ -27,7 +27,7 @@ export function Detail(props: RouteComponentProps<Params> & React.Props<any>) {
         const imageBaseUrl = process.env.IMAGES_BASE_URL
         const apiKey = process.env.API_KEY
         async function fetchMovie() {
-            const movie = await fetch(`${baseUrl}/${params.id}?api_key=${apiKey}`)
+            const movie = await fetch(`${baseUrl}/movie/${params.id}?api_key=${apiKey}`)
             .then(res => res.json())
             
             setContent({
