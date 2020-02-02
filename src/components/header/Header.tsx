@@ -12,7 +12,6 @@ export function Header() {
                     <h2>Layana</h2>
                 </Link>
                 <div className="navbar">
-                    <a>Categories</a>
                     <button className="profile-btn">
                         <img src={AccountIcon} alt="account icon"/>
                         <span>Profile</span>

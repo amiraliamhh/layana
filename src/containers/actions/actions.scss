@@ -1,0 +1,27 @@
+.actions {
+    width: 200px;
+    height: 100%;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .add-favourite {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+            font-size: .9rem;
+            margin-left: 8px;
+        }
+    }
+    .add-to-watch-later {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+            font-size: .9rem;
+            margin-left: 8px;
+        }
+    }
+}
