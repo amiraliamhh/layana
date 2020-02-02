@@ -24,20 +24,27 @@ function Item({
 
 interface ListProps {
     title: string
+    items?: ItemProps[]
 }
 
 export function List({
-    title
+    title,
+    items = []
 }: ListProps & React.Props<any>) {
     return (
         <div className="list">
             <h2>{ title }</h2>
             <div className="items">
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
+                {
+                    items.map((item, index) => (
+                        <Item
+                            key={index}
+                            title={item.title}
+                            image={item.image}
+                            year={item.year}
+                        />
+                    ))
+                }
             </div>
         </div>
     )

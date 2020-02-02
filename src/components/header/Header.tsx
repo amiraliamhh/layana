@@ -12,10 +12,10 @@ export function Header() {
                     <h2>Layana</h2>
                 </Link>
                 <div className="navbar">
-                    <button className="profile-btn">
+                    <Link to="/profile" className="profile-btn">
                         <img src={AccountIcon} alt="account icon"/>
                         <span>Profile</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
