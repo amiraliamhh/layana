@@ -1,10 +1,14 @@
 import * as React from 'react'
 import { useState } from 'react'
 
-import { StarIcon } from '../../icons/Star'
-import { WatchLaterIcon } from '../../icons/WatchLater'
 import { Actions } from '../../containers/actions'
 import './search.scss'
+
+export interface Movie {
+    image: string
+    title: string
+    year: number
+}
 
 export function Search() {
     const [ searchText, setSearchText ] = useState('')
@@ -63,7 +67,14 @@ export function Search() {
                                             <span>{ new Date(result.release_date).getFullYear() }</span>
                                         </div>
                                         <div className="actions-container">
-                                            <Actions id={result.id} />
+                                            <Actions
+                                                id={result.id}
+                                                movie={{
+                                                    image: `${imagesBaseUrl}${result.poster_path}`,
+                                                    title: result.title,
+                                                    year: new Date(result.release_date).getFullYear()
+                                                }}
+                                            />
                                             <img src={`${imagesBaseUrl}${result.poster_path}`} alt="movie poster"/>
                                         </div>
                                     </div>

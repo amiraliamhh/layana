@@ -3,13 +3,16 @@ import { useState } from 'react'
 
 import { StarIcon } from '../../icons/Star'
 import { WatchLaterIcon } from '../../icons/WatchLater'
+import { Movie } from '../../components/search'
 
 interface ActionsProps {
     id: number|string
+    movie: Movie
 }
 
 export function Actions({
-    id
+    id,
+    movie
 }: ActionsProps & React.Props<any>) {
     const savedFavs = window.localStorage.getItem('favs')
     const [ favs, setFavs ] = useState(savedFavs ? new Set(JSON.parse(savedFavs)) : new Set())
@@ -18,14 +21,19 @@ export function Actions({
 
     function changeList(listName: string, value: number) {
         const savedList = window.localStorage.getItem(listName)
+        const savedListMovies = window.localStorage.getItem(`${listName}movies`)
+        const savedMovies = savedListMovies ? JSON.parse(savedListMovies) : {}
         const listArray = savedList ? JSON.parse(savedList) : []
         const list = new Set(listArray)
         if (list.has(value)) {
-            list.delete(value)    
+            list.delete(value)
+            delete savedMovies[value]
         } else {
             list.add(value)
+            savedMovies[value] = movie
         }
         window.localStorage.setItem(listName, JSON.stringify(list))
+        window.localStorage.setItem(`${listName}movies`, JSON.stringify(savedMovies))
         return list
     }
 

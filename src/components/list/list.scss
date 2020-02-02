@@ -1,0 +1,22 @@
+.list {
+    width: 100%;
+    h2 {
+        font-size: 48px;
+    }
+    .items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            margin-top: 16px;
+            width: 25%;
+            img {
+                width: 75%;
+            }
+            h3 {
+                margin: 4px 0px;
+                font-size: 24px;
+            }
+        }
+    }
+}
