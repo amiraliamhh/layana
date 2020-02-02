@@ -11,6 +11,9 @@
     .container {
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 1200px) {
+            padding: 0px 8px;
+        }
         .logo {
             text-decoration: none;
             h2 {

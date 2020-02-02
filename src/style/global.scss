@@ -3,6 +3,9 @@
 .container {
     width: $container-size;
     display: flex;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
 }
 
 body {

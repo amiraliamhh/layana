@@ -58,7 +58,7 @@ export function Search() {
                     ? (
                         <div className="results">
                             {
-                                searchResults.length
+                                searchResults && searchResults.length
                                 ? searchResults.map((result: any) => (
                                     <div className="result" key={result.id}>
                                         <div className="description">

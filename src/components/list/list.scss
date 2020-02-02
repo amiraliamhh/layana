@@ -1,5 +1,8 @@
 .list {
     width: 100%;
+    @media screen and (max-width: 1200px) {
+        padding: 0px 8px;
+    }
     h2 {
         font-size: 48px;
     }
@@ -10,6 +13,9 @@
         .item {
             margin-top: 16px;
             width: 25%;
+            @media screen and (max-width: 1200px) {
+                width: 50%;
+            }
             img {
                 width: 75%;
             }

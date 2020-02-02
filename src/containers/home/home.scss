@@ -7,11 +7,4 @@
         height: calc(100% - #{$header-height});
         justify-content: center;
     }
-    .scroll-icon {
-        position: absolute;
-        bottom: 48px;
-        path {
-            fill: $primary;
-        }
-    }
 }
