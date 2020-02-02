@@ -9,10 +9,12 @@
     "dev": "parcel public/index.html"
   },
   "devDependencies": {
+    "@types/node": "^13.7.0",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
+    "babel-polyfill": "^6.26.0",
     "parcel": "^1.12.4",
     "sass": "^1.25.0",
     "typescript": "^3.7.5"

@@ -11,6 +11,12 @@
     .container {
         align-items: center;
         justify-content: space-between;
+        .logo {
+            text-decoration: none;
+            h2 {
+                color: #ffffff;
+            }
+        }
         .navbar {
             display: flex;
             align-items: center;

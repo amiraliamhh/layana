@@ -1,0 +1,27 @@
+.info {
+    width: 40%;
+    img {
+        width: 60%;
+    }
+    .actions {
+        width: 60%;
+        margin-top: 16px;
+        .add-fav {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            span {
+                margin-left: 8px;
+            }
+        }
+        .add-watch-later {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            span {
+                margin-left: 8px;
+            }
+        }
+    }
+}

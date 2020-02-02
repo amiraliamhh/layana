@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 import AccountIcon from '../../../public/assets/account.svg'
 import './header.scss'
@@ -7,9 +8,9 @@ export function Header() {
     return (
         <div className="header">
             <div className="container">
-                <div className="logo">
+                <Link to="/" className="logo">
                     <h2>Layana</h2>
-                </div>
+                </Link>
                 <div className="navbar">
                     <a>Categories</a>
                     <button className="profile-btn">
