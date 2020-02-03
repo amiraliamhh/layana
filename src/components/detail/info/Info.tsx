@@ -31,8 +31,8 @@ export function Info({
                     <WatchLaterIcon />
                     <span>{
                         isInWatchLater
-                        ? 'Is In Your Watch Later List'
-                        : 'Add To Watch Later'    
+                        ? 'Is In Your Watch Later List!'
+                        : 'Add To Watch Later'
                     }</span>
                 </div>
             </div>
