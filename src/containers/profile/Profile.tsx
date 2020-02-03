@@ -35,13 +35,10 @@ export function Profile() {
                     title="Favourites"
                     items={favs || []}
                 />
-                {
-                    watchLaters && watchLaters.length ? <List
-                        title="Watch Later"
-                        items={watchLaters || []}
-                    />
-                    : null
-                }
+                <List
+                    title="Watch Later"
+                    items={watchLaters || []}
+                />
             </div>
         </div>
     )

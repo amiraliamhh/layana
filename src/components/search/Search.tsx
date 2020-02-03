@@ -18,15 +18,17 @@ export function Search() {
     const imagesBaseUrl = process.env.IMAGES_BASE_URL
 
     async function search() {
-        setLoading(true)
-        const baseUrl = process.env.BASE_URL
-        const apiKey = process.env.API_KEY
-        const { results } = await fetch(`${baseUrl}/search/movie?api_key=${apiKey}&query=${searchText}`)
-            .then(res => res.json())
-        
-        setSearchResults(results)
-        setShowResults(true)
-        setLoading(false)
+        if (searchText) {
+            setLoading(true)
+            const baseUrl = process.env.BASE_URL
+            const apiKey = process.env.API_KEY
+            const { results } = await fetch(`${baseUrl}/search/movie?api_key=${apiKey}&query=${searchText}`)
+                .then(res => res.json())
+            
+            setSearchResults(results)
+            setShowResults(true)
+            setLoading(false)
+        }
     }
 
     function handleSearchChange({ target: { value } }: React.ChangeEvent<HTMLInputElement>) {
@@ -64,7 +66,7 @@ export function Search() {
                                         <div className="description">
                                             <h4>{ result.title }</h4>
                                             <span>|</span>
-                                            <span>{ new Date(result.release_date).getFullYear() }</span>
+                                            <span className="year">{ new Date(result.release_date).getFullYear() }</span>
                                         </div>
                                         <div className="actions-container">
                                             <Actions
@@ -75,7 +77,7 @@ export function Search() {
                                                     year: new Date(result.release_date).getFullYear()
                                                 }}
                                             />
-                                            <img src={`${imagesBaseUrl}${result.poster_path}`} alt="movie poster"/>
+                                            <img className="poster" src={`${imagesBaseUrl}${result.poster_path}`} alt="movie poster"/>
                                         </div>
                                     </div>
                                 ))

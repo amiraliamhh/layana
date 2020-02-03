@@ -56,7 +56,7 @@ export function Actions({
                 <StarIcon width={16} height={16} fill={favs.has(id) ? '#ebc22f' : '#424242'} />
                 <span>{
                     favs.has(id)
-                    ? 'Is Your Favorite!'
+                    ? 'Is Your Favourite!'
                     : 'Add To Favourites'
                 }</span>
             </div>

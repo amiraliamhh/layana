@@ -11,29 +11,32 @@ import { NoMatch } from './containers/no-match'
 import { Detail } from './containers/detail'
 import { Profile } from './containers/profile'
 import { Header } from './components/header'
+import { ErrorBoundary } from './components/error-boundary'
 
 export function App() {
     return (
-        <BrowserRouter>
-            <>
-                <Header />
-                <Switch>
-                    <Route exact={true} path="/">
-                        <Home />
-                    </Route>
-                    <Route
-                        path="/detail/:id"
-                        component={Detail}
-                    />
-                    <Route
-                        path="/profile"
-                        component={Profile}
-                    />
-                    <Route path="*">
-                      <NoMatch />
-                    </Route>
-                </Switch>
-            </>
-        </BrowserRouter>
+        <ErrorBoundary>
+            <BrowserRouter>
+                <>
+                    <Header />
+                    <Switch>
+                        <Route exact={true} path="/">
+                            <Home />
+                        </Route>
+                        <Route
+                            path="/detail/:id"
+                            component={Detail}
+                        />
+                        <Route
+                            path="/profile"
+                            component={Profile}
+                        />
+                        <Route path="*">
+                          <NoMatch />
+                        </Route>
+                    </Switch>
+                </>
+            </BrowserRouter>
+        </ErrorBoundary>
     )
 }

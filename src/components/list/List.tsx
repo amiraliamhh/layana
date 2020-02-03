@@ -36,7 +36,8 @@ export function List({
             <h2>{ title }</h2>
             <div className="items">
                 {
-                    items.map((item, index) => (
+                    items.length
+                    ? items.map((item, index) => (
                         <Item
                             key={index}
                             title={item.title}
@@ -44,6 +45,9 @@ export function List({
                             year={item.year}
                         />
                     ))
+                    : (
+                        <p>You have added no movies to this list yet.</p>
+                    )
                 }
             </div>
         </div>
